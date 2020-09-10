@@ -1,0 +1,27 @@
+{
+  "name": "sp-share-cal-rotation-util",
+  "version": "0.0.1",
+  "private": true,
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "path": "^0.12.7"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "heroku"
+  ],
+  "author": "JIN",
+  "license": "MIT",
+  "engines": {
+    "node": "12.5.0",
+    "npm": "6.14.4"
+  },
+  "homepage": "./",
+  "devDependencies": {}
+}

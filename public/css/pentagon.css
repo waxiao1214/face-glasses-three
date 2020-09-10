@@ -1,0 +1,47 @@
+/* #pentagon {
+    position: absolute;
+    width: 54px;
+    box-sizing: content-box;
+    border-width: 50px 18px 0;
+    border-style: solid;
+    border-color: white transparent;
+    bottom: 11px;
+    right: -1px;
+    z-index: 5;
+}
+
+#pentagon:before {
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -85px;
+    left: -18px;
+    border-width: 0 45px 35px;
+    border-style: solid;
+    border-color: transparent transparent white;
+} */
+
+#pentagon {
+    position: absolute;
+    width: 85px;
+    box-sizing: content-box;
+    border-width: 80px 43px 0;
+    border-style: solid;
+    border-color: transparent transparent;
+    bottom: 11px;
+    right: -20px;
+    z-index: 6;
+}
+
+#pentagon:before {
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -155px;
+    left: -41px;
+    border-width: 0 83px 75px;
+    border-style: solid;
+    border-color: transparent transparent transparent;
+}

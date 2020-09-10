@@ -1,0 +1,794 @@
+html, body {
+    zoom: 100%;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+.body {
+    width: 92%;
+    margin-left: 4%;
+    text-align: center;
+    height: 100%;
+}
+
+/* Loading animation */
+
+.loadingAnim {
+    display: none;
+    position: absolute;
+    top: 20%;
+    right: 0;
+    bottom: 0;
+    left: 20%;
+    width: 50%;
+    height: 50%;
+    overflow: hidden;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0);
+    text-align: center;
+    font-size: 18px;
+}
+
+.loadingAnim .spinner-main-wrap {
+    position: absolute;
+    top: 50%;
+    left: 28%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.spinner1 {
+    margin: 0 auto;
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    font-size: 10px;
+    /*background-color: #fff;*/
+}
+
+.spinner1>div {
+    background-color: #fff;
+    height: 100%;
+    width: 6px;
+    display: inline-block;
+    -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+    animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner1 .rect2 {
+    -webkit-animation-delay: -1.1s;
+    animation-delay: -1.1s;
+}
+
+.spinner1 .rect3 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+}
+
+.spinner1 .rect4 {
+    -webkit-animation-delay: -0.9s;
+    animation-delay: -0.9s;
+}
+
+.spinner1 .rect5 {
+    -webkit-animation-delay: -0.8s;
+    animation-delay: -0.8s;
+}
+
+@-webkit-keyframes sk-stretchdelay {
+    0%,
+    40%,
+    100% {
+        -webkit-transform: scaleY(0.4)
+    }
+    20% {
+        -webkit-transform: scaleY(1.0)
+    }
+}
+
+@keyframes sk-stretchdelay {
+    0%,
+    40%,
+    100% {
+        transform: scaleY(0.4);
+        -webkit-transform: scaleY(0.4);
+    }
+    20% {
+        transform: scaleY(1.0);
+        -webkit-transform: scaleY(1.0);
+    }
+}
+
+/* ends Loading animation */
+
+/*********Swing********/
+
+.animated {
+    -webkit-animation-duration: 100s;
+    animation-duration: 0.7s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes swing {
+    50% {
+        transform: rotate(3deg);
+    }
+    100% {
+        transform: rotate(-3deg);
+    }
+}
+
+@keyframes swing {
+    50% {
+        transform: rotate(3deg);
+    }
+    100% {
+        transform: rotate(-3deg);
+    }
+}
+
+
+/*@keyframes swing2 {
+  50% { transform: rotate(-5deg); }
+  100% { transform: rotate(5deg); }
+}*/
+
+.swing {
+    /*-webkit-transform-origin: top center;
+  transform-origin: 50% 50%;*/
+    -webkit-animation-name: swing;
+    animation-name: swing;
+}
+
+
+/*.swing2 {
+  -webkit-animation-name: swing2;
+  animation-name: swing2;
+}*/
+
+/********* Swing Stop ********/
+
+.camera_div {
+    display: flex;
+    /* position: absolute;  */
+    flex-direction: row;
+    justify-content: center;
+    width: 963px;
+    height: 520px;
+    margin-left: 4%;
+    zoom: "100%";
+}
+
+.maincamera {
+    width: 640px;
+    height: 480px;
+    position: absolute;
+    left: 0px;
+    background-color: antiquewhite;
+    overflow: hidden;
+}
+
+.Wishlist{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    left: 4px;
+    top: 3px;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.share_bttn_on{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    left: 4px;
+    top: 35px;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.Close{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+    z-index: 15;
+}
+
+.loadmore {
+    width: 20px;
+    height: 9px;
+    position: absolute;
+    right: 7px;
+    bottom: 15px;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.loadup {
+    width: 20px;
+    height: 9px;
+    position: absolute;
+    right: 7px;
+    top: 105px;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.category {
+    position: absolute;
+    width: 323px;
+    left: 641px;
+    top: 0px;
+    height: 480px;
+    background-color: antiquewhite;
+    z-index: 10;
+}
+
+.tab {
+    width: 100%;
+    height: 100px;
+    background-color: rgb(242,242,242);
+    border: 1px solid rgba(0,0,0,0);
+    /* border-bottom: 1px solid #D2D9DD; */
+    text-align: left;
+}
+
+.tabbtn {
+    width: 100%;
+    height: 41px;
+    margin-top: 20px;
+    display: flex;
+    overflow: scroll hidden;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+h3 {
+    margin: 0px;
+    padding: 10px 20px;
+}
+
+.categories {
+    width: 100%;
+    height: 380px;
+    background-color: white;
+    display: block;
+    text-align: center;
+    overflow-y: scroll;
+    border: 1px solid rgba(0,0,0,0.1);
+    scrollbar-width: none;
+}
+
+.categories::-webkit-scrollbar {
+    display: none;
+}
+
+.flex-categories {
+    flex-flow: row wrap;
+    align-items: flex-start;
+    scrollbar-width: none;
+    align-content: flex-start;
+}
+
+.flex-categories::-webkit-scrollbar {
+    display: none;
+}
+
+.setbtn {
+    background-color: red;
+    color: white;
+}
+
+.unsetbtn {
+    background-color: white;
+    color: black;
+}
+
+.unsetbtn:hover {
+    background-color: rgba(255, 0, 0, 0.1);
+}
+
+.favourite {
+    position: absolute;
+    width: 320px;
+    left: 0px;
+    height: 480px;
+    z-index: 5;
+    border: 1px solid rgba(0,0,0,0.1);
+    background-color: white;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+.favourities {
+    width: 100%;
+    height: 438px;
+    background-color: white;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+.favourities::-webkit-scrollbar {
+    display: none;
+}
+
+.category_div {
+    width: 250px;
+    height: 170px;
+    border-radius: 10px;
+    margin-left: 35px;
+    cursor: pointer;
+    margin-top: 15px;
+    background-color: white;
+    border: 1px solid rgba(0,0,0,0.1);
+    overflow: visible;
+}
+
+.category_div:hover {
+    /* background-color: #FAFFDA; */
+    box-shadow: 0 0 10px rgba(255,0,0,0.2);
+}
+
+.selectedCategory {
+    /* background-color: yellow; */
+    box-shadow: 0 0 10px red;
+}
+
+.selectedCategory:hover {
+    /* background-color: yellow; */
+    box-shadow: 0 0 10px red;
+}
+
+.cattitle_div {
+    width: 100%;
+    height: 15px;
+    margin-left: 15px;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.catimg_div {
+    width: 100%;
+    height: 145px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.cataddfavbtn_div {
+    width: 25px;
+    cursor: pointer;
+    margin-top: -184px;
+    margin-left: 185px;
+}
+
+.iPhoneAddBtn {
+    margin-left: 170px;
+}
+
+.heart {
+    fill: violet;
+    position: relative;
+    top: 6px;
+    width:100%;
+    height:100%;
+    right: 160px;
+    /* animation: pulse 1s ease infinite; */
+}
+
+.heart:hover {
+    /* fill: rgba(255,0,0,0.5); */
+    transform: scale(1.3);
+}
+
+.heart_added_favourite {
+    fill: red;
+}
+
+.clickupdown {
+    /*fill: violet;*/
+    top: 0px;
+    position: relative;
+    width:50px;
+    height:15px;
+    /* animation: pulse 1s ease infinite; */
+}
+
+
+#overlayVideo{
+    width: 100%;
+    height: 100%;
+}
+
+#overlay{
+    width: 100%;
+    height: 100%;
+}
+
+#overlay2{
+    width: 100%;
+    height: 100%;
+}
+
+#overlay3{
+    width: 100%;
+    height: 100%;
+}
+
+.favourite_heart {
+    fill: violet;
+    position: relative;
+    width:100%;
+    height:100%;
+}
+
+.favourite_heart:hover {
+    transform: scale(1.3);
+}
+
+.viewbtndiv {
+    padding: 3px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: -20px;
+    margin-left: 215px;
+    margin-right: 3px;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 5px;
+    font-size: 10px;
+    background-color: mediumspringgreen
+}
+
+.iPhoneViewBtn {
+    margin-left: 200px;
+    margin-right: 10px;
+}
+
+.viewbtndiv:hover {
+    background-color: yellowgreen;
+}
+
+.viewbtnfavdiv {
+    padding: 3px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: -20px;
+    margin-right: 3px;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 5px;
+    font-size: 10px;
+    background-color: mediumspringgreen
+}
+
+.viewbtnfavdiv:hover {
+    background-color: yellowgreen;
+}
+
+.removebtndiv {
+  padding: 3px;
+  cursor: pointer;
+  text-align: center;
+  margin-top: -145px;
+  margin-right: 5px;
+  font-size: 10px;
+  color: white;
+  background-color: red;
+  border-radius: 5px;
+  width: fit-content;
+  height: fit-content;
+}
+
+.removebtndiv:hover {
+    background-color: rgb(223, 159, 173);
+}
+
+.buybtndiv {
+    padding: 4px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 98px;
+    margin-left: 175px;
+    margin-right: 3px;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 3px;
+    font-size: 14px;
+    color: white;
+    z-index: 10;
+    background-color: rgb(252, 3, 7);
+}
+
+.iPhoneBuyBtn {
+    margin-top: 93px;
+}
+
+.buybtndiv:hover {
+    background-color: rgb(223, 159, 173);
+}
+
+.buybtnfavdiv {
+    padding: 4px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 70px;
+    margin-right: 3px;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 3px;
+    font-size: 14px;
+    color: white;
+    background-color: rgb(252, 3, 7)
+}
+
+.buybtnfavdiv:hover {
+    background-color: rgb(223, 159, 173);
+}
+
+.customizedModal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 5000; /* Sit on top */
+    padding-top: 50px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.borderRadius {
+    border-radius: 35px 35px 0px 0px;
+}
+
+/********* Buttons **********/
+
+#download_bttn{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: -2px;
+    top: -135px;
+    cursor: pointer;
+}
+
+#share_bttn{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: -2px;
+    top: -90px;
+    cursor: pointer;
+}
+
+#back{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: -2px;
+    top: -45px;
+    cursor: pointer;
+}
+
+#menu{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 21px;
+    cursor: pointer;
+    z-index: 5;
+}
+
+/********* END Buttons **********/
+
+.customizedModal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid #888;
+    width: 300px;
+}
+
+.customClose {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.customClose:hover,
+.customClose:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.smallWords {
+    cursor: pointer;
+    margin-top: 29px;
+    margin-left: 6px;
+    font-size: 9px;
+    line-height: 1.5;
+}
+
+.iPhoneCategoryTitle {
+    font-size: 13px;
+}
+
+#needhelp{
+    display: block;
+    top: 480px;
+    width: 280px;
+    height: 25px;
+    left: 684px;
+    position: absolute;
+}
+
+
+@media only screen and (max-width: 1024px) {
+
+    .category {
+        width: 643px;
+        left: 0px;
+        height: 301px;
+    }
+
+    .category_div{
+        margin-left: 50px
+    }
+
+
+    .loadingAnim{
+        top: 15%;
+        right: 0;
+        bottom: 0;
+        left: 25%;
+        width: 50%;
+        height: 50%;
+        font-size: 30px;
+    }
+
+    .loadingAnim .spinner-main-wrap {
+        left: 50%
+    }
+
+    .spinner1{
+        width: 100px;
+        height: 70px;
+    }
+
+    .Wishlist{
+        width: 50px;
+        height: 50px;
+    }
+    
+    .share_bttn_on{
+        top: 60px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .Close{
+        width: 50px;
+        height: 50px;
+    }
+
+    .categories {
+        width: 100%;
+        height: 200px;
+        display: flex;
+        overflow: scroll hidden;
+        overflow-x: hidden;
+    }
+
+    .cataddfavbtn_div {
+        margin-left: 175px;
+        margin-right: 6px;
+    }
+
+    .iPhoneAddBtn {
+        margin-left: 165px;
+    }
+
+    .maincamera {
+        width: 642px;
+    }
+
+    .loadmore {
+        width: 50px;
+        height: 12px;
+        right: 280px;
+        top: 8px;
+    }
+
+    .loadup {
+        width: 50px;
+        height: 12px;
+        right: 280px;
+        top: 8px;
+    }
+
+    .viewbtndiv {
+        margin-top: -22px;
+        margin-left: 207px;
+        margin-right: 14px;
+    }
+
+    .iPhoneViewBtn {
+        margin-left: 200px;
+        margin-right: 20px;
+    }
+
+    .buybtndiv {
+        margin-left: 130px;
+    }
+
+    .smallWords {
+        margin-top: 30px;
+        margin-left: 250px;
+        font-size: 12px;
+    }
+
+/*    #overlayVideo{
+        width: auto;
+        height: auto;
+    }
+
+    #overlay{
+        width: auto;
+        height: auto;
+    }
+
+    #overlay2{
+        width: auto;
+        height: auto;
+    }
+
+    #overlay3{
+        width: auto;
+        height: auto;
+    }*/
+
+
+    #download_bttn{
+        width: 60px;
+        height: 60px;
+        top: -200px;
+    }
+
+    #share_bttn{
+        width: 60px;
+        height: 60px;
+        top: -130px;
+    }
+
+    #back{
+        width: 60px;
+        height: 60px;
+        top: -60px;
+    }
+
+
+
+    #menu {
+        width: 80px;
+        height: 80px;
+    }
+}
